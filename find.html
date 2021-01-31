@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="animecss.css">
+    <meta charset="UTF-8">
+    <title>Find an Anime</title>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="lightmode">
+
+    <div class="topbanner">
+
+        <a href="index.html"><img src="img/logo.png" class="logoplaceholder"></a>
+
+        <ul class="mainmenu">
+            <li><a href="search.html" class="nomobile">Search By Name</a></li>
+            <li><a href="find.html" class="nomobile">Discover</a></li>
+            <li><a href="about.html" class="nomobile">About</a></li>
+            <li><a href="search.html" class="mobileonly">Search </a></li>
+            <li><a href="find.html" class="mobileonly">Discover</a></li>
+            <li><a href="about.html" class="mobileonly">About</a></li>
+        </ul>
+
+
+    </div>
+
+<div class="findgrid" id="findpageenter">
+
+    <div class="findgridele">
+    
+        <div class="searchtitle">
+        <h2>Anime Search!</h2>
+        <p>Find the perfect anime</p>
+        </div>
+
+        <hr class="blankdivider">
+
+        <div class="genresection">
+        <p>Genre</p>
+        <p class="smallp">Select up to 3 Genres.</p>
+        <select id="genre">
+            <option value="1">Action</option>
+            <option value="2">Adventure</option>
+            <option value="3">Cars</option>
+            <option value="4">Comedy</option>
+            <option value="6">Demons</option>
+            <option value="7">Mystery</option>
+            <option value="8">Drama</option>
+
+            <option value="10">Fantasy</option>
+            <option value="11">Game</option>
+            <option value="13">Historical</option>
+
+            <option value="15">Kids</option>
+            <option value="16">Magic</option>
+            <option value="17">Martial Arts</option>
+            <option value="18">Mecha</option>
+            <option value="19">Music</option>
+            <option value="20">Parody</option>
+            <option value="21">Samurai</option>
+            <option value="22">Romance</option>
+            <option value="23">School</option>
+            <option value="24">Sci Fi</option>
+            <option value="25">Shoujo</option>
+            <option value="26">Shoujo Ai</option>
+            <option value="27">Shounen</option>
+            <option value="28">Shounen Ai</option>
+            <option value="29">Space</option>
+            <option value="30">Sports</option>
+            <option value="31">Super Power</option>
+            <option value="32">Vampire</option>
+            <option value="36">Slice Of Life</option>
+            <option value="37">Supernatural</option>
+            <option value="38">Military</option>
+            <option value="39">Police</option>
+            <option value="40">Psychological</option>
+            <option value="41">Thriller</option>
+        </select>
+
+        <select id="genre2">
+            <option value="1">Action</option>
+            <option value="2">Adventure</option>
+            <option value="3">Cars</option>
+            <option value="4">Comedy</option>
+            <option value="6">Demons</option>
+            <option value="7">Mystery</option>
+            <option value="8">Drama</option>
+
+            <option value="10">Fantasy</option>
+            <option value="11">Game</option>
+            <option value="13">Historical</option>
+
+            <option value="15">Kids</option>
+            <option value="16">Magic</option>
+            <option value="17">Martial Arts</option>
+            <option value="18">Mecha</option>
+            <option value="19">Music</option>
+            <option value="20">Parody</option>
+            <option value="21">Samurai</option>
+            <option value="22">Romance</option>
+            <option value="23">School</option>
+            <option value="24">Sci Fi</option>
+            <option value="25">Shoujo</option>
+            <option value="26">Shoujo Ai</option>
+            <option value="27">Shounen</option>
+            <option value="28">Shounen Ai</option>
+            <option value="29">Space</option>
+            <option value="30">Sports</option>
+            <option value="31">Super Power</option>
+            <option value="32">Vampire</option>
+            <option value="36">Slice Of Life</option>
+            <option value="37">Supernatural</option>
+            <option value="38">Military</option>
+            <option value="39">Police</option>
+            <option value="40">Psychological</option>
+            <option value="41">Thriller</option>
+        </select>
+        
+        <select id="genre3">
+            <option value="1">Action</option>
+            <option value="2">Adventure</option>
+            <option value="3">Cars</option>
+            <option value="4">Comedy</option>
+            <option value="6">Demons</option>
+            <option value="7">Mystery</option>
+            <option value="8">Drama</option>
+
+            <option value="10">Fantasy</option>
+            <option value="11">Game</option>
+            <option value="13">Historical</option>
+
+            <option value="15">Kids</option>
+            <option value="16">Magic</option>
+            <option value="17">Martial Arts</option>
+            <option value="18">Mecha</option>
+            <option value="19">Music</option>
+            <option value="20">Parody</option>
+            <option value="21">Samurai</option>
+            <option value="22">Romance</option>
+            <option value="23">School</option>
+            <option value="24">Sci Fi</option>
+            <option value="25">Shoujo</option>
+            <option value="26">Shoujo Ai</option>
+            <option value="27">Shounen</option>
+            <option value="28">Shounen Ai</option>
+            <option value="29">Space</option>
+            <option value="30">Sports</option>
+            <option value="31">Super Power</option>
+            <option value="32">Vampire</option>
+            <option value="36">Slice Of Life</option>
+            <option value="37">Supernatural</option>
+            <option value="38">Military</option>
+            <option value="39">Police</option>
+            <option value="40">Psychological</option>
+            <option value="41">Thriller</option>
+        </select>
+
+        <a id="addgenre2" onclick="togglegenres(2)"><img class="plusminus" src="img/red-plus.png"></a>
+        <a id="addgenre3" onclick="togglegenres(3)"><img class="plusminus" src="img/red-plus.png"></a>
+        <a id="lessgenre3" onclick="togglegenres(4)"><img class="plusminus" src="img/red-minus.png"></a>
+        <a id="lessgenre2" onclick="togglegenres(5)"><img class="plusminus" src="img/red-minus.png"></a>
+
+        
+        </div>
+
+        <hr class="divider">
+
+        <div class="releasesection">
+            <p>Release Date</p>
+            <p class="smallp">Select a release date.</p>
+            <select id="reldate">
+                <option value="all">All</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>    
+                <option value="before2013">Before 2013</option>
+            </select>
+        </div>
+
+        <hr class="divider">
+
+        <div class="scoresection">
+            <p>Minimum Rating Score</p>
+            <p class="smallp">Each Anime has a fan review rating from 1-10, you can include a minimum score for your search.</p>
+            <select id="minrating">
+                <option value="all">All</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <hr class="divider">
+
+        <div class="episodesection">
+            <p>Minimum Episodes</p>
+            <p class="smallp">Want something to binge watch? Find anime with lots of episodes by choosing the minimum amount of episodes.</p>
+            <select id="mineps">
+            <option value="all">Any</option>
+            <option value="10">10</option>
+            <option value="30">30</option>
+            <option value="70">70</option>
+            <option value="100">100+</option>
+            </select>
+        </div>
+
+        <hr class="divider">
+
+        <div class="typesection">
+            <p>Type</p>
+            <p class="smallp">Do you want to find a tv series, a movie or a special?</p>
+            <select id="showtype">
+                <option value="all">Any</option>
+                <option value="TV">TV Series</option>
+                <option value="Movie">Movie</option>
+                <option value="Special">Special</option>
+            </select>
+        </div>
+        
+        <button id="animefindbtn" onclick="loadanimefind()">Find Anime</button>
+
+    </div>
+    
+
+<div id="findimg" class="nomobile">
+    <img src="img/edwardelric.png">
+</div>
+    
+</div>
+
+
+    <div class="loadingscreen" id="loadingscreenfind">
+    <div class="lds-dual-ring"></div>
+    </div>
+
+
+    <div class="findagain" id="findagainbtn">
+        <a href="find.html" style="text-decoration: none;"><img src="img/arrow.png"></a> <a href="find.html" style="text-decoration: none;"><h5>Search Again</h5></a>   
+    </div>
+
+
+    <div class="gridresults" id="resultsshown">
+
+    </div>
+
+    <footer>
+        
+        <div class="mobileonly">
+            <img src="img/logowhite.png" class="logofooter">
+        </div>
+
+        <div class="footerfindanime">
+            <h5>Find The Anime For You</h5>
+            <ul>
+                <li><a href="find.html">Get Anime Recommendation</a></li>
+                <li><a href="search.html">Search For Anime By Name</a></li>      
+            </ul>
+        </div>
+
+        <div class="footersiteinfo nomobile">
+            <h5>© FindAnime 2020</h5>
+        </div>
+
+        <div class="footerimplinks">
+            <h5>Important Links</h5>
+            <ul>
+                <li><a href="https://jikan.moe/">Jikan API</a></li>
+                <li><a href="https://myanimelist.net/">MyAnimeList</a></li>      
+            </ul>
+        </div>
+        
+    </footer>
+
+<script src="animejs.js"></script>
+</body>
+
+</html>

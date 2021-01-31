@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="animecss.css">
+        <meta charset="UTF-8">
+        <title>Find an Anime</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+<body id="anipagebody" class="lightmode" onload="generateanipage()"> 
+
+    <div class="topbanner">
+
+        <a href="index.html"><img src="img/logo.png" class="logoplaceholder"></a>
+
+        <ul class="mainmenu">
+            <li><a href="search.html" class="nomobile">Search By Name</a></li>
+            <li><a href="find.html" class="nomobile">Discover</a></li>
+            <li><a href="about.html" class="nomobile">About</a></li>
+            <li><a href="search.html" class="mobileonly">Search </a></li>
+            <li><a href="find.html" class="mobileonly">Discover</a></li>
+            <li><a href="about.html" class="mobileonly">About</a></li>
+        </ul>
+
+
+    </div>
+    
+    
+<div id="anipagegrid">
+
+    
+    <div class="animeimgwrapper">
+        <img id="animeimg">
+    </div>
+
+    <div class="generalinfo">
+        <h2 id="animetitle"></h2>
+        <h5 id="japanesetitle"></h5>
+        <p id="animepremiered" class="smallp"></p>
+        <p id="animesynopsis" class="bigp"></p>
+        <p id="animeagerating" class="smallp"></p>
+        <p id="animeratingscore" class="smallp"></p>
+        <p id="animegenres" class="smallp"></p>
+        <p id="animetype" class="smallp"></p>
+        <p id="animeair" class="smallp"></p>
+        <p id="animeairstatus" class="smallp"></p>
+    </div>
+
+
+</div>
+
+    <div id="animetrailer"></div>
+
+    <div id="relatedanime"></div>
+
+
+    <footer>
+        
+        <div class="mobileonly">
+            <img src="img/logowhite.png" class="logofooter">
+        </div>
+
+        <div class="footerfindanime">
+            <h5>Find The Anime For You</h5>
+            <ul>
+                <li><a href="find.html">Get Anime Recommendation</a></li>
+                <li><a href="search.html">Search For Anime By Name</a></li>      
+            </ul>
+        </div>
+
+        <div class="footersiteinfo nomobile">
+            <h5>© FindAnime 2020</h5>
+        </div>
+
+        <div class="footerimplinks">
+            <h5>Important Links</h5>
+            <ul>
+                <li><a href="https://jikan.moe/">Jikan API</a></li>
+                <li><a href="https://myanimelist.net/">MyAnimeList</a></li>      
+            </ul>
+        </div>
+        
+    </footer>
+
+<script src="animejs.js">
+</script>
+</body>
+
+</html>

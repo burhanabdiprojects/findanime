@@ -1,0 +1,1194 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: montserrat;
+list-style-type: none;
+}
+
+a {
+color:black;
+}
+
+
+.lightmode {
+background-color: white;
+color: black;
+}
+
+p {
+font-size: 14px;
+}
+
+.darkmode {
+background-color: #303030;
+color: white;
+}
+
+.greyband {
+height: 200px;
+width: 100%;
+background-color: #303030;
+color: white;
+}
+
+
+.grid {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-auto-rows: minmax(min-content, auto);
+}
+
+.topbanner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 8px;
+}
+
+.mainmenu {
+text-decoration: none;
+text-transform: uppercase;
+list-style-type: none;
+}
+
+.mainmenu li {
+display: inline;
+padding: 0 10px;
+}
+
+.mainmenu li a {
+text-decoration: none;
+font-size: 15px;
+}
+
+.mainbannerfind {
+    height: 500px;
+    width: 100vw;
+    max-width: 100%;
+    grid-column: 1 / 3;
+    grid-row-start: 2;
+    background-image: url("img/mhawp.png");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mainbannersearch {
+    height: 500px;
+    width: 100vw;
+    max-width: 100%;
+    grid-column: 3 / -1;
+    grid-row-start: 2;
+    background-image: url("img/futuretrunks.png");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.redbutton {
+background-color: rgb(227, 36, 49, 0.75);
+color: white;
+padding: 5px 5px;
+width: 130px;
+height: auto;
+border-radius: 3px;
+display: flex;
+justify-content: center;
+}
+
+.redbutton h2 {
+
+}
+
+
+
+.homebanner {
+width: 100%;
+height: 300px;
+display: flex;
+justify-content: space-evenly;
+}
+
+.homebannertext {
+width: 50%;
+padding-top: 70px;
+text-align: center;
+}
+
+.homebannertext h3 {
+width: 100%;
+}
+
+.homebannertext p {
+width: 70%;
+margin: 10px auto;
+}
+
+.homebannerimg {
+width: 50%;
+display: flex;
+justify-content: center;
+}
+
+.homebannerimg img {
+height: 100%;
+}
+
+.resultswrapper {
+column-span: 1;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: flex-start;
+}
+
+#resultsshown {
+display: none;
+}
+
+.imgwrapper {
+display: flex;
+justify-content: center;
+width: 40%;
+}
+
+.imgwrapper img {
+max-height: 140px;
+max-width: 80%;
+}    
+
+.searchdetails {
+display: flex;
+flex-wrap: wrap;
+justify-content: start;
+align-items: flex-start;
+width: 60%; 
+}
+
+.searchdetails h5 {
+margin-bottom: 6px;
+}
+
+.searchdetails p {
+margin: 3px 0;
+font-size: 12px;
+width: 100%;
+}
+
+
+.findagain {
+grid-column: 1 / -1;
+width: 100%;
+text-align: left;
+display: flex;
+align-items: center;
+}
+
+.findagain img {
+max-height: 20px;
+width: auto;
+margin: 20px 10px 20px 20px;
+}
+
+.findagain h4 {
+width: auto;
+display: inline-block;
+}
+
+#searchagainbtn, #findagainbtn {
+display: none;
+}
+
+.blackbg {
+background-color: black;
+height: 300px;
+width: 100%;
+color: white;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 300px;
+max-height: 300px;
+}
+
+#homeblbgtext {
+grid-column: 1 / 2;
+display: flex;
+justify-content: center;
+}
+
+#narusasu {
+grid-column: 2 / -1;
+display: flex;
+justify-content: center;
+}
+
+#babygoku {
+grid-column: 3 / -1;
+display: flex;
+justify-content: center;
+}
+
+.blackbg img {
+max-width: 100%;
+}
+
+
+.moreinfowrapper {
+width: 100%;
+height: 100%;
+background-color: rgb(0, 0, 0, 0.5);
+position: absolute;
+top: 0;
+display: none;
+justify-content: center;
+align-items: center;
+}
+
+.moreinfo {
+background-color: #404040;
+height: 500px;
+width: 1000px;
+}
+
+#genre2 {
+display: none;
+}
+
+#genre3 {
+display: none;
+}
+
+#addgenre3 {
+display: none;
+}
+
+#lessgenre3 {
+display: none;
+}
+
+#lessgenre2 {
+display: none;
+}
+
+.respage {
+background-image: url('img/blackbg.jpg');
+background-position: center;
+background-repeat: repeat-y;
+background-size: 100%;
+}
+
+
+
+#animetitle, #animesynopsis, #japanesetitle, #animepremiered, #animeagerating, #animeratingscore, #scoredby, #animeair, #animetype, #animeairstatus{
+width: 100%;
+margin: 5px 0;
+}
+
+.loadingscreen {
+height: 450px;
+display: none;
+justify-content: center;
+align-items: center;
+
+}
+
+.lds-dual-ring {
+  display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 2px 10px;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    border-color:black transparent black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+#animetrailer {
+display: flex;
+justify-content: center;
+margin: 30px auto 0;
+background-color: black;
+padding: 30px 0;
+}
+
+.plusminus {
+max-height: 11px;
+margin: 0 3px;
+cursor: pointer; 
+}
+
+.divider {
+  border: 1px solid rgba(212, 212, 212, 0.25);
+  width: 100%;
+  margin: 10px 0;
+}
+
+#findimg {
+grid-column: 3 / -1;
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+#findimg img {
+  max-height: 500px;
+  margin-top: 40px;
+}
+
+
+.genresection, .releasesection, .scoresection, .episodesection, .typesection {
+width: 100%;
+margin: 5px 0;
+}
+
+#animefindbtn {
+margin: 10px 0;
+}
+
+.findgridele h2 {
+text-align: center;
+}
+
+
+.searchwrapper {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-content: flex-start;
+background-image: url(img/mhawhite.png);
+background-position: center;
+height: 400px;
+background-size: cover;
+margin-top: 30px;
+}
+
+.searchwrapper button{
+  background-color: red;
+  color: white;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer; 
+  }
+
+#searchtitle, #searchdesc  {
+margin-top: 10px;
+}
+
+#searchdesc {
+margin-bottom: 10px;
+}
+
+.fullwidth {
+width: 100%;
+}
+
+.text-center {
+text-align: center;
+}
+
+.noresults {
+grid-column: 1 / -1;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+height: 70px;
+}
+
+.noresults h3 {
+width: 100%;
+text-align: center;
+}
+
+#aboutbanner {
+height: 150px;
+}
+
+#featuresbanner {
+height: 150px;
+background-color: red;
+display: flex;
+justify-content: space-evenly;
+}
+
+.featurebit img {
+max-height: 60px;
+}
+
+.featurebit {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+width: 150px;
+color: white;
+}
+
+.featurebit p, .featurebit h6 {
+width: 100%;
+text-align: center;
+}
+
+.blankdivider {
+  margin: 10px 0;
+  border: none;
+}
+
+@media (max-width: 800px){
+
+#animefindbtn {
+margin-top: 40px;
+}
+
+#findimg {
+  display: none;
+}
+
+#aboutbanner{
+ width: 100%;
+ height: 200px;
+ background-image: url("img/dragon.jpg");
+ background-size: cover;
+ background-position: center;
+}
+  
+
+.logoplaceholder {
+height: 15px;
+margin: 10px;
+}
+
+#kamehameha {
+height: 1000px;
+width: 100%;
+background-image: url("img/kamehameha.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+.frntbtn {
+width: auto;
+height: auto;
+padding: 10px 5px;
+min-width: 60px;
+background-color: red;
+color: white;
+border: none;
+border-radius: 3px;
+margin: 20px auto;
+}
+
+.frntbtn a {
+color: white;
+text-decoration: none;
+}
+
+.mainlinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.aboutbanner h2, .searchbanner h2, .findbanner h2 {
+  width: 100%;
+}
+
+.aboutbanner p, .searchbanner p, .findbanner p {
+  width: 100%;
+}
+
+
+.aboutbanner {
+  color: white;
+  width: 80%;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 50px auto 50px;
+  background-image: url("img/stars.jpg");
+  background-position: bottom;
+  background-size: cover;
+  align-content: center;
+}
+
+.searchbanner {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("img/attackontitan.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  margin: 0 auto 30px;
+  align-content: center;
+  text-align: center;
+}
+
+.searchbanner h2, .findbanner h2 {
+  font-size: 20px;
+}
+
+.findbanner {
+  color: white;
+  width: 80%;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto 30px;
+  background-image: url("img/kamehamehabw.jpg");
+  background-position: bottom;
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+}
+
+.findbanner img {
+max-height: 100%;
+}
+
+.about {
+width: 90%;
+height: 200px;
+margin: 20px auto;
+}
+
+.about h2 {
+text-align: center;
+margin: 10px 0;
+}
+
+.about p {
+font-size: 14px;
+}
+
+.about ul {
+margin: 10px 0;
+}
+.about ul li {
+font-size: 12px;
+margin: 5px 0;
+}
+
+.about .split {
+display: flex;
+align-content: center;
+justify-content: center;
+flex-wrap: wrap;
+text-align: center;
+width: 100%;
+}
+
+.split {
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-content: center;
+text-align: center;
+flex-wrap: wrap;
+}
+
+.split h2, .split p {
+margin: 10px 0;
+width: 100%;
+}
+
+#point {
+background-image: url("img/point.jpg");
+background-size: cover;
+background-position: center;
+}
+
+.mainpagebanner {
+width: 100%;
+height: 300px;
+background-image: url("img/sky.jpg");
+background-size: cover;
+background-position: top;
+margin-bottom: 20px;
+color: white;
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+}
+
+.mainpagebanner h1 {
+width: 100%;
+text-align: center;
+font-size: 21px;
+}
+
+.mainpagebanner p {
+width: 100%;
+text-align: center;
+font-size: 13px;
+margin-top: 10px;
+}
+
+.bigp {
+font-size: 12px;
+margin: 20px 0;
+}
+
+.smallp {
+font-size: 10px;
+margin: 5px 0;
+}
+
+#relatedanime {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+}
+
+#relatedanime a {
+text-decoration: none;
+}
+
+.relatedtext {
+text-align: center;
+width: 100%;
+margin: 20px 0;
+}
+
+#relatedanime h4 {
+font-size: 14px;
+width: 100%;
+text-align: center;
+margin: 5px 0;
+}
+
+#relatedanime div {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+width: 100%;
+margin: 10px;
+}
+
+#relatedanime img {
+max-height: 200px;
+margin: 10px 0 20px;
+}
+
+#anipagegrid {
+display: flex;
+margin: 20px 0;
+width: 100%;
+flex-wrap: wrap;
+}
+
+.animeimgwrapper {
+width: 100%;
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
+}
+
+#animeimg {
+max-height: 300px;
+margin-top: 10px;
+}
+
+.generalinfo{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+margin: 0 20px;
+}
+
+.findgrid {
+margin: 10px 0 30px 0;
+width: 100%;
+background-color:white;
+}
+
+.searchtitle {
+margin: 10px 0 20px;
+width: 100%;
+}
+
+.findgridele {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.findgridele button{
+  background-color: red;
+  color: white;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer; 
+}
+
+.findgridele div {
+width: 100%;
+margin: 10px 30px;
+}
+
+.searchtitle h2, .searchtitle p {
+  width: 100%;
+  text-align: center;
+}
+
+.gridresults {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(min-content, 140px);
+    column-gap: 5px;
+    row-gap: 50px;
+    margin: 10px 20px 30px;
+ }
+
+.gridresults h5 {
+font-size: 13px;
+}
+.gridresults p {
+font-size: 11px;
+}
+
+.logofooter {
+max-height: 20px;
+}
+
+footer {
+background-color: black;
+height: auto;
+min-height: 100px;
+width: 100%;
+color: white;
+display: flex;
+flex-wrap: wrap;
+text-align: left;
+padding: 20px 0;
+}
+
+footer a {
+color: white;
+text-decoration: none;
+}
+
+footer ul {
+list-style-type: none;
+}
+
+footer ul li {
+font-size: 10px;
+}
+
+footer div h5{
+margin: 0 0 5px 0;
+}
+
+footer div {
+width: 100%;
+margin: 15px 30px;
+}
+
+.topbanner ul li a {
+font-size: 11px;
+}
+
+.nomobile {
+display: none;
+}
+
+}
+
+@media (min-width: 800px){
+
+#animefindbtn {
+margin-top: 30px;
+}
+
+#aboutbanner{
+ width: 100%;
+ height: 300px;
+ background-image: url("img/dragon.jpg");
+ background-size: cover;
+ background-position: top;
+}
+  
+.logoplaceholder {
+height: 25px;
+margin: 10px;
+}
+
+
+.frntbtn {
+  width: auto;
+  height: auto;
+  padding: 10px 5px;
+  min-width: 60px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin: 20px auto;
+}
+
+.frntbtn a {
+  color: white;
+  text-decoration: none;
+}
+
+.mainlinks {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.searchbanner {
+  width: 30%;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("img/attackontitan.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  margin: 50px auto 50px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+  
+.searchbanner h2, .findbanner h2, .aboutbanner h2 {
+    font-size: 20px;
+    width: 100%;
+}
+
+.searchbanner p, .findbanner p, .aboutbanner p {
+  width: 100%;
+}
+  
+.findbanner {
+  color: white;
+  width: 30%;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto 50px;
+  background-image: url("img/kamehamehabw.jpg");
+  background-position: bottom;
+  background-size: cover;
+  align-content: center;
+  text-align: center;
+}
+  
+.aboutbanner {
+  color: white;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 50px auto 50px;
+  background-image: url("img/stars.jpg");
+  background-position: bottom;
+  background-size: cover;
+  align-content: center;
+}
+
+.mainpagebanner {
+width: 100%;
+height: 400px;
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+color: white;
+background-image: url("img/sky.jpg");
+background-position: center;
+background-size: cover;
+}
+
+.mainpagebanner img {
+max-height: 100%;
+}
+
+
+.mainpagebanner h1, .mainpagebanner p {
+width: 90%;
+text-align: center;
+margin: 10px auto;
+}
+
+.mainpagebanner .split p {
+width: 80%;
+}
+
+.bigp {
+font-size: 14px;
+margin: 20px 0;
+}
+
+.smallp {
+font-size: 12px;
+margin: 5px 0;
+}
+
+#relatedanime {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+}
+
+#relatedanime a {
+text-decoration: none;
+}
+
+.relatedtext {
+text-align: center;
+width: 100%;
+margin: 20px 0;
+}
+
+#relatedanime h4 {
+font-size: 14px;
+width: 100%;
+text-align: center;
+}
+
+#relatedanime div {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+width: 15%;
+}
+
+#relatedanime img {
+max-height: 100px;
+margin: 10px 0 20px;
+}
+
+
+#relatedanime {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-content: center;
+}
+
+#relatedanime a {
+text-decoration: none;
+}
+
+.relatedtext {
+text-align: center;
+width: 100%;
+margin: 20px 0;
+}
+
+#relatedanime h4 {
+font-size: 14px;
+width: 100%;
+text-align: center;
+}
+
+#relatedanime div {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+width: 15%;
+}
+
+#relatedanime img {
+max-height: 100px;
+margin: 10px 0 20px;
+}
+
+
+#anipagegrid {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-auto-rows: minmax(min-content, auto);
+gap: 15px;
+margin: 20px 10px;
+}
+
+.animeimgwrapper {
+grid-column: 1 / 2;
+display: flex;
+justify-content: center;
+}
+
+#animeimg {
+max-height: 300px;
+margin-top: 10px;
+}
+
+.generalinfo{
+grid-column: 2 / -1;
+display: flex;
+flex-wrap: wrap;
+}
+
+
+.findgrid {
+display: grid;
+grid-template-columns: 1fr 2fr 2fr 1fr;
+grid-template-rows: minmax(150px, auto);
+margin: 10px 0 30px 0;
+width: 100%;
+background-color: #fefefe;
+}
+
+.searchtitle {
+margin: 10px 0 20px;
+width: 100%;
+}
+
+.searchtitle p {
+width: 100%;
+text-align: center;
+}
+
+.findgridele {
+grid-column: 2 / 3;
+display: flex;
+justify-content: left;
+align-items: space-between;
+flex-wrap: wrap;
+padding-top: 20px;
+}
+
+.findgridele button{
+background-color: red;
+color: white;
+border: 0;
+padding: 5px 10px;
+border-radius: 3px;
+cursor: pointer; 
+}
+
+.gridresults {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-auto-rows: minmax(min-content, 140px);
+    column-gap: 5px;
+    row-gap: 25px;
+    margin: 10px 0 30px 0;
+ }
+
+footer {
+background-color: black;
+height: auto;
+min-height: 100px;
+width: 100%;
+clear: both;
+color: white;
+display: flex;
+justify-content: space-around;
+text-align: center;
+padding: 20px 0;
+}
+
+footer a {
+color: white;
+text-align: left;
+text-decoration: none;
+}
+
+footer ul {
+list-style-type: none;
+text-align: left;
+}
+
+footer ul li {
+font-size: 10px;
+}
+
+footer div h5{
+margin: 0 0 5px 0;
+}
+
+.mobileonly {
+display: none;
+}
+
+.about {
+width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+#dragon {
+background-image: url("img/dragon2.jpg");
+background-size: cover;
+background-position: center;
+}
+
+.about h2 {
+width: 80%;
+text-align: center;
+margin: 10px 0;
+}
+
+.about p {
+width: 80%;
+text-align: left;
+margin: 5px auto 10px;
+}
+
+.split {
+height: 100%;
+width: 50%;
+display: flex;
+justify-content: center;
+align-content: center;
+text-align: center;
+flex-wrap: wrap;
+}
+
+
+.split h2, .split p {
+margin: 10px 0;
+width: 100%;
+}
+
+#point {
+background-image: url("img/point.jpg");
+background-size: cover;
+background-position: center;
+}
+
+}

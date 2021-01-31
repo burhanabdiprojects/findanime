@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="animecss.css">
+    <meta charset="UTF-8">
+    <title>Find an Anime</title>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="lightmode">
+
+
+    <div class="topbanner">
+
+        <a href="index.html"><img src="img/logo.png" class="logoplaceholder"></a>
+
+        <ul class="mainmenu">
+            <li><a href="search.html" class="nomobile">Search By Name</a></li>
+            <li><a href="find.html" class="nomobile">Discover</a></li>
+            <li><a href="about.html" class="nomobile">About</a></li>
+            <li><a href="search.html" class="mobileonly">Search </a></li>
+            <li><a href="find.html" class="mobileonly">Discover</a></li>
+            <li><a href="about.html" class="mobileonly">About</a></li>
+        </ul>
+
+
+    </div>
+
+    
+
+    <div class="searchwrapper" id="searchpageenter">
+    <h2 class="fullwidth text-center" id="searchtitle">Find Your Anime</h2>
+    <p class="fullwidth text-center" id="searchdesc">Enter the name of the anime you are looking for, e.g. Pokemon.</p>
+    
+    <input id="animesearch"></input>
+
+    <button id="animesearchbtn" onclick="loadanimesearch()" >Search Anime</button>
+
+    </div>
+    <!-- <div class="lds-dual-ring" id="loading"></div> -->
+
+
+    <div class="loadingscreen" id="loadingscreensearch">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <div class="findagain" id="searchagainbtn">
+        <a href="search.html" style="text-decoration: none;"><img src="img/arrow.png"></a>
+        <a href="search.html" style="text-decoration: none;"><h5>Search Again</h5></a>   
+    </div>
+
+
+    <div class="gridresults" id="resultsshown">
+
+        
+    </div>
+
+    <footer>
+        
+        <div class="mobileonly">
+            <img src="img/logowhite.png" class="logofooter">
+        </div>
+
+        <div class="footerfindanime">
+            <h5>Find The Anime For You</h5>
+            <ul>
+                <li><a href="find.html">Get Anime Recommendation</a></li>
+                <li><a href="search.html">Search For Anime By Name</a></li>      
+            </ul>
+        </div>
+
+        <div class="footersiteinfo nomobile">
+            <h5>© FindAnime 2020</h5>
+        </div>
+
+        <div class="footerimplinks">
+            <h5>Important Links</h5>
+            <ul>
+                <li><a href="https://jikan.moe/">Jikan API</a></li>
+                <li><a href="https://myanimelist.net/">MyAnimeList</a></li>      
+            </ul>
+        </div>
+        
+    </footer>
+    
+<script src="animejs.js"></script>
+</body>
+
+</html>
