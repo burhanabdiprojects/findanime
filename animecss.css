@@ -570,8 +570,7 @@ p {
 
 .about {
   width: 90%;
-  height: 200px;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 .about h2 {
@@ -581,6 +580,7 @@ p {
 
 .about p {
   font-size: 14px;
+  text-align: center;
 }
 
 .about ul {
@@ -1142,6 +1142,7 @@ footer div h5{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 50px 0;
 }
 
 #dragon {
@@ -1158,7 +1159,7 @@ footer div h5{
 
 .about p {
   width: 80%;
-  text-align: left;
+  text-align: center;
   margin: 5px auto 10px;
 }
 

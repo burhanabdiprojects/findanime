@@ -1,21 +1,6 @@
 
-/*
-fetch('https://api.jikan.moe/v3/anime/1')
-.then(res => res.json())
-.then(data => console.log(data))
-.catch(error => console.log(error));
-
-document.getElementById("findanime").onclick = function() {findanime2()};
-let findanime = () => console.log("arrow functions are cool");
-*/
 
 const api = 'https://api.jikan.moe/v3/anime/';
-
-
-
-/*
-document.getElementById("animesearchbtn").onclick = function() {animesearch()} */
-
 
 
 function loadanimesearch() {
