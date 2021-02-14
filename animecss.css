@@ -526,6 +526,7 @@ p {
   width: 100%;
   font-size: 12px;
   margin-top: 5px;
+  text-align: center;
 }
 
 
@@ -541,6 +542,7 @@ p {
   background-position: bottom;
   background-size: cover;
   align-content: center;
+  justify-content: center;
 }
 
 .searchbanner {
@@ -555,6 +557,7 @@ p {
   margin: 0 auto 30px;
   align-content: center;
   text-align: center;
+  justify-content: center;
 }
 
 .searchbanner h2, .findbanner h2, .aboutbanner h2 {
@@ -573,6 +576,7 @@ p {
   background-size: cover;
   align-content: center;
   text-align: center;
+  justify-content: center;
 }
 
 .findbanner img {
@@ -645,7 +649,7 @@ p {
 }
 
 .mainpagebanner h1 {
-  width: 80%;
+  width: 90%;
   text-align: center;
   font-size: 21px;
 }
