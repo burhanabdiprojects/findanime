@@ -846,10 +846,6 @@ footer div {
   display: none;
 }
 
-p {
-  max-width: 85%;
-}
-
 }
 
 @media (min-width: 800px){
