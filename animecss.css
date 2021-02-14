@@ -455,6 +455,11 @@ p {
 
 @media (max-width: 800px){
 
+.mainmenu li {
+  display: inline;
+  padding: 0 5px;
+}
+
 p {
   font-size: 11px;
 }
@@ -640,7 +645,7 @@ p {
 }
 
 .mainpagebanner h1 {
-  width: 100%;
+  width: 80%;
   text-align: center;
   font-size: 21px;
 }
@@ -838,6 +843,10 @@ footer div {
   display: none;
 }
 
+p {
+  max-width: 85%;
+}
+
 }
 
 @media (min-width: 800px){
@@ -859,7 +868,7 @@ p {
 }
   
 .logoplaceholder {
-  height: 22px;
+  height: 20px;
   margin: 8px;
 }
 
