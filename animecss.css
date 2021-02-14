@@ -479,7 +479,6 @@ p {
  background-size: cover;
  background-position: center;
 }
-  
 
 .logoplaceholder {
   height: 15px;
@@ -840,7 +839,7 @@ footer div {
 }
 
 .topbanner ul li a {
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .nomobile {
