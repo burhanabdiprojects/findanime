@@ -2,7 +2,7 @@
 
 const api = 'https://api.jikan.moe/v3/anime/';
 
-
+/* The loading screen once a search is initiated */
 function loadanimesearch() {
     document.getElementById("searchpageenter").style.display = "none";
     document.getElementById("loadingscreensearch").style.display = "flex";
