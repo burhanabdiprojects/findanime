@@ -3,11 +3,14 @@
 const api = 'https://api.jikan.moe/v3/anime/';
 
 /* The loading screen once a search is initiated */
+
 function loadanimesearch() {
     document.getElementById("searchpageenter").style.display = "none";
     document.getElementById("loadingscreensearch").style.display = "flex";
     setTimeout(function() { animesearch(); }, 1000);
 }
+
+/* When user makes search by name */
 
 let animesearch = () => {
 
@@ -17,7 +20,7 @@ let animesearch = () => {
     document.getElementById("resultsshown").innerHTML = "";
 
     let anisea = document.getElementById("animesearch").value;
-    console.log(anisea);
+  
     let all = "all";
     fetch("https://api.jikan.moe/v3/search/anime?q=" + anisea + "&page=1")
     .then(res => res.json())
@@ -31,11 +34,14 @@ let animesearch = () => {
 var idarr = [];
 var moreinfolink = [];
 
+
+/* Results are generated */
+
 function simpleresults(data){
 
     let arrlength = data.results.length;
     let noresult = 0;
-    console.log(data);
+
 
 
     for(let i = 0; i < arrlength; i++){
@@ -177,6 +183,8 @@ function simpleresults(data){
 var secondgenr = false;
 var thirdgenr = false;
 
+/* Toggling genres on form entry */
+
 function togglegenres(a) {
     if(a == 2){
     document.getElementById("addgenre2").style.display = "none";
@@ -206,11 +214,15 @@ function togglegenres(a) {
     }
 }
 
+/* Loading 'find anime' results */
+
 function loadanimefind() {
     document.getElementById("findpageenter").style.display = "none";
     document.getElementById("loadingscreenfind").style.display = "flex";
     setTimeout(function() { animefind(); }, 1000);
 }
+
+/* Generating the 'search anime by name' results */
 
 function animefind() {
 
@@ -235,9 +247,6 @@ function animefind() {
 
     let type = document.getElementById("showtype").value;
     
-    console.log(releasedate);
-    console.log(genreid);
-    console.log("https://api.jikan.moe/v3/genre/anime/" + genreid + "/1")
     
    
     
@@ -247,8 +256,7 @@ function animefind() {
     .then(res => res.json())
     .then(data => {
     
-        console.log(genre2 + genre3);
-    console.log(data);
+
     
     
     results(data, minrating, minimumeps, releasedate, genre2, genre3, type);  
@@ -265,14 +273,13 @@ function animefind() {
     
     
     
-
+/* Generating the 'find anime by metrics' results */
 
 function results(data, min, eps, rdate, gen2, gen3, typ) { 
 
     let arrlength = data.anime.length;
     let noresult = true;
-    console.log(data);
-    console.log("Gens are " + gen2 + gen3);
+  
 
     for(i = 0; i < arrlength; i++){
     
@@ -280,7 +287,7 @@ function results(data, min, eps, rdate, gen2, gen3, typ) {
         var startdate = data.anime[i].airing_start.substring(0, 4);
         } else {
         var startdate = 0;
-        console.log("airing date is null");
+    
         }
 
         let genlength = data.anime[i].genres.length;
@@ -326,7 +333,7 @@ function results(data, min, eps, rdate, gen2, gen3, typ) {
             }
         }
 
-        console.log(genrecheck)
+      
 
         if(genrecheck != "ban"){
 
@@ -371,7 +378,7 @@ function results(data, min, eps, rdate, gen2, gen3, typ) {
             
             idarr.push(data.anime[i].mal_id);
             idarr[i] = data.anime[i].mal_id;
-            console.log("pushed to idarr is " + data.anime[i].mal_id);
+          
             
             var newmoreinfo = document.createElement("p");
 
@@ -435,7 +442,7 @@ function results(data, min, eps, rdate, gen2, gen3, typ) {
 
 
 
-
+/* Once user clicks through on individual anime */
 
 function moreinfo (val) {
 
@@ -448,19 +455,20 @@ function moreinfo (val) {
     
 }
 
+/* Generate anime page */
 
 function generateanipage () { 
 
 
     var showid = localStorage.getItem("id");
-    console.log(showid);
+
 
 
 
     fetch('https://api.jikan.moe/v3/anime/' + showid)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+ 
         document.getElementById("animeimg").src = data.image_url;
         document.getElementById("animetitle").innerHTML = data.title_english;
         document.getElementById("japanesetitle").innerHTML = data.title_japanese;
@@ -500,8 +508,6 @@ function generateanipage () {
         document.getElementById("animeair").innerHTML = "<strong>Aired:</strong> " + data.aired.string;
 
         document.getElementById("animeairstatus").innerHTML = "<strong>Status: </strong> " + data.status;
-
-        console.log(data.type + " is the data type");
 
         if(data.type == "TV"){
             document.getElementById("animetype").innerHTML = "<strong>Type:</strong> TV Series";
@@ -547,6 +553,8 @@ function generateanipage () {
 }
 
 
+/* Generating 'related anime' section */
+
 function fillrelated(data, related) {
     var numberofrel = 0;
 
@@ -587,7 +595,6 @@ function fillrelated(data, related) {
         reldiv.appendChild(reltitle);
         reldiv.appendChild(relimg);
         let rel1id = data.related.Sequel[i].mal_id;
-        console.log(rel1id);
 
         reltitle.appendChild(rellink);
 
@@ -613,7 +620,7 @@ function fillrelated(data, related) {
         reldiv.appendChild(reltitle);
         reldiv.appendChild(relimg);
         let rel1id = data.related.Other[i].mal_id;
-        console.log(rel1id);
+     
         reltitle.appendChild(rellink);
 
 
@@ -641,7 +648,7 @@ function fillrelated(data, related) {
         reltitle.appendChild(rellink);
 
         let rel1id = data.related["Side story"][i].mal_id;
-        console.log(rel1id);
+    
 
 
         rellink.onclick = function () {moreinfo(rel1id)}
@@ -667,7 +674,7 @@ function fillrelated(data, related) {
             reldiv.appendChild(reltitle);
             reldiv.appendChild(relimg);
             let rel1id = data.related["Parent story"][i].mal_id;
-            console.log(rel1id);
+         
 
             reltitle.appendChild(rellink);
 
