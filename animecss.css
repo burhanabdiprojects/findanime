@@ -325,8 +325,18 @@ p {
   display: flex;
   justify-content: center;
   margin: 50px auto 0;
-  background-color: black;
-  padding: 50px 0;
+  background-color: #262626;
+  padding: 60px 0;
+  color: white;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#animetrailer h2{
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  z-index: 1;
 }
 
 .plusminus {
@@ -935,6 +945,11 @@ p {
   align-content: center;
   text-align: center;
 }
+
+.findbanner a{
+  width: auto;
+  margin: 0 auto;
+}
   
 .aboutbanner {
   color: white;
@@ -949,16 +964,24 @@ p {
   align-content: center;
 }
 
+.menuoverlay{
+  position: absolute;
+  top: 0%;
+  background-color: none;
+  width: 100%;
+}
+
+
 .mainpagebanner {
   width: 100%;
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   color: white;
-  /* background-image: url("img/sky.jpg"); */
+  background-image: url("img/gokuvegetabg.jpg");
   background-color: black;
-  background-position: center;
+  background-position: top;
   background-size: cover;
 }
 
@@ -989,7 +1012,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  padding: 40px 0;
+  padding: 40px 0px;
 }
 
 #relatedanime a {
@@ -1088,7 +1111,8 @@ p {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-rows: minmax(150px, auto);
-  margin: 10px 0 30px 0;
+  margin: 10px 0 0 0;
+  padding-bottom: 30px;
   width: 100%;
   background-color: #fefefe;
 }
@@ -1135,7 +1159,8 @@ p {
   grid-auto-rows: minmax(min-content, 140px);
   column-gap: 5px;
   row-gap: 25px;
-  margin: 10px 0 30px 0;
+  margin: 10px 0 0px 0;
+  padding-bottom: 150px;
  }
 
  .black {
@@ -1145,7 +1170,7 @@ p {
 footer {
   background-color: black;
   height: auto;
-  min-height: 200px;
+  min-height: 120px;
   width: 100%;
   clear: both;
   color: white;
@@ -1174,9 +1199,6 @@ footer div h5{
   margin: 0 0 5px 0;
 }
 
-.mobileonly {
-  display: none;
-}
 
 .about {
   width: 100%;
@@ -1201,7 +1223,7 @@ footer div h5{
 }
 
 .about p {
-  width: 80%;
+  width: 60%;
   text-align: center;
   margin: 5px auto 10px;
 }
@@ -1226,6 +1248,80 @@ footer div h5{
   background-image: url("img/point.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.white{
+  color: white;
+}
+
+.white a{
+  color: white;
+}
+
+.whitebox{
+  color: black;
+  background-color: white;
+  height: auto;
+  width: auto;
+}
+
+.mobileonly {
+  display: none;
+}
+
+.bannertext{
+  width: 60%;
+}
+.bannertext h1{
+  font-size: 45px;
+}
+
+
+.mainlinks{
+  position: absolute;
+  top: 100%;
+}
+
+.redbox{
+  background-color: red;
+  width: 100%;
+  height: 200px;
+}
+
+.darkwave{
+  background-image: url("img/darkwave.jpg");
+  width: 100%;
+  height: 390px;
+  background-position: center;
+  background-size: cover;
+}
+
+.about{
+  color: white;
+  background-color: #262626;
+  padding-top: 250px;
+}
+
+.wrap{
+  position: relative;
+  min-height: 100vh;
+}
+
+.stay{
+  position: absolute;
+  bottom: 0;
+}
+
+.frntbtn:hover{
+  cursor: pointer;
+}
+
+.findgrid{
+  padding-bottom: 170px;
+}
+
+#relatedanime{
+  padding-bottom: 170px;
 }
 
 }

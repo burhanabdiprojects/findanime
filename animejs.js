@@ -523,7 +523,7 @@ function generateanipage () {
 
 
         if(trailer != null){
-        document.getElementById("animetrailer").innerHTML = "<iframe width=\"560\" height=\"315\" src=\"" + trailer + "\"frameborder=\"0\"  allowfullscreen></iframe>"
+        document.getElementById("animetrailer").innerHTML = "<h2>Watch The Trailer</h2> <iframe width=\"560\" height=\"315\" src=\"" + trailer + "\"frameborder=\"0\"  allowfullscreen></iframe>"
         }else{
         document.getElementById("animetrailer").style.display = "none";
         }
