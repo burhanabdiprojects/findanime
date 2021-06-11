@@ -1278,8 +1278,6 @@ footer div h5{
 
 
 .mainlinks{
-  position: absolute;
-  top: 100%;
 }
 
 .redbox{
@@ -1299,7 +1297,7 @@ footer div h5{
 .about{
   color: white;
   background-color: #262626;
-  padding-top: 250px;
+  padding: 100px 0;
 }
 
 .wrap{
